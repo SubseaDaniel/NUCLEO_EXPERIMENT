@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Flash_CM7",
+      "type": "shell",
+      "command": "C:/ST/STM32CubeCLT_1.18.0/STM32CubeProgrammer/bin/STM32_Programmer_CLI.exe",
+      "args": [
+        "-c", "port=SWD",
+        "-w", "${workspaceFolder}/CM7/build/DTCU_DEV_CM7.elf", "0x08000000",
+        "-v",
+        "-rst"
+      ],
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "Flash_CM4",
+      "type": "shell",
+      "command": "C:/ST/STM32CubeCLT_1.18.0/STM32CubeProgrammer/bin/STM32_Programmer_CLI.exe",
+      "args": [
+        "-c", "port=SWD",
+        "-w", "${workspaceFolder}/CM4/build/DTCU_DEV_CM4.elf", "0x08100000",
+        "-v",
+        "-rst"
+      ],
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "Flash_Both_CM7_CM4",
+      "dependsOn": [
+        "Flash_CM7",
+        "Flash_CM4"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
+
+
