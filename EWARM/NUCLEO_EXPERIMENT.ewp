@@ -358,6 +358,9 @@
           <state>$PROJ_DIR$/../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy</state>
           <state>$PROJ_DIR$/../Drivers/CMSIS/Device/ST/STM32H7xx/Include</state>
           <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
+          <state>$PROJ_DIR$/../CM4/FATFS/Target</state>
+          <state>$PROJ_DIR$/../CM4/FATFS/App</state>
+          <state>$PROJ_DIR$/../Middlewares/Third_Party/FatFs/src</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -2176,6 +2179,36 @@
             <name>$PROJ_DIR$/../CM4/Core/Src/stm32h7xx_hal_msp.c</name>
           </file>
         </group>
+        <group>
+          <name>FATFS</name>
+          <excluded>
+            <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+          </excluded>
+          <group>
+            <name>App</name>
+            <excluded>
+              <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+            </excluded>
+            <file>
+              <name>$PROJ_DIR$/../CM4/FATFS/App/fatfs.c</name>
+            </file>
+          </group>
+          <group>
+            <name>Target</name>
+            <excluded>
+              <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+            </excluded>
+            <file>
+              <name>$PROJ_DIR$/../CM4/FATFS/Target/bsp_driver_sd.c</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$/../CM4/FATFS/Target/sd_diskio.c</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$/../CM4/FATFS/Target/user_diskio.c</name>
+            </file>
+          </group>
+        </group>
       </group>
       <group>
         <name>CM7</name>
@@ -2293,6 +2326,39 @@
       <name>CMSIS</name>
       <file>
         <name>$PROJ_DIR$/../Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c</name>
+      </file>
+    </group>
+  </group>
+  <group>
+    <name>Middlewares</name>
+    <group>
+      <name>FatFs</name>
+      <excluded>
+        <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+      </excluded>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FatFs/src/diskio.c</name>
+        <excluded>
+          <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+        </excluded>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FatFs/src/ff.c</name>
+        <excluded>
+          <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+        </excluded>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</name>
+        <excluded>
+          <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+        </excluded>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Middlewares/Third_Party/FatFs/src/option/syscall.c</name>
+        <excluded>
+          <configuration>NUCLEO_EXPERIMENT_CM7</configuration>
+        </excluded>
       </file>
     </group>
   </group>
